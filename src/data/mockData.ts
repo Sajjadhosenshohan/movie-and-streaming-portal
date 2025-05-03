@@ -1,0 +1,271 @@
+import { Media, Review, Comment, User } from '../types';
+
+export const users: User[] = [
+  {
+    id: '1',
+    name: 'John Doe',
+    email: 'john@example.com',
+    avatar: 'https://i.pravatar.cc/150?img=1',
+    role: 'user'
+  },
+  {
+    id: '2',
+    name: 'Jane Smith',
+    email: 'jane@example.com',
+    avatar: 'https://i.pravatar.cc/150?img=5',
+    role: 'user'
+  },
+  {
+    id: '3',
+    name: 'Admin User',
+    email: 'admin@example.com',
+    avatar: 'https://i.pravatar.cc/150?img=3',
+    role: 'admin'
+  }
+];
+
+export const movies: Media[] = [
+  {
+    id: '1',
+    title: 'Inception',
+    poster: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    backdrop: 'https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    releaseYear: 2010,
+    genres: ['Sci-Fi', 'Action', 'Thriller'],
+    director: 'Christopher Nolan',
+    cast: ['Leonardo DiCaprio', 'Joseph Gordon-Levitt', 'Ellen Page'],
+    synopsis: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.',
+    rating: 8.8,
+    streamingPlatforms: ['Netflix', 'Amazon Prime'],
+    buyPrice: 14.99,
+    rentPrice: 3.99,
+    duration: '2h 28m',
+    type: 'movie',
+    isFeatured: true,
+    isEditorsPick: true
+  },
+  {
+    id: '2',
+    title: 'The Shawshank Redemption',
+    poster: 'https://images.pexels.com/photos/1304469/pexels-photo-1304469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    backdrop: 'https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    releaseYear: 1994,
+    genres: ['Drama'],
+    director: 'Frank Darabont',
+    cast: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton'],
+    synopsis: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',
+    rating: 9.3,
+    streamingPlatforms: ['HBO Max', 'Amazon Prime'],
+    buyPrice: 12.99,
+    rentPrice: 2.99,
+    duration: '2h 22m',
+    type: 'movie',
+    isFeatured: true
+  },
+  {
+    id: '3',
+    title: 'Pulp Fiction',
+    poster: 'https://images.pexels.com/photos/1200450/pexels-photo-1200450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    backdrop: 'https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    releaseYear: 1994,
+    genres: ['Crime', 'Drama'],
+    director: 'Quentin Tarantino',
+    cast: ['John Travolta', 'Uma Thurman', 'Samuel L. Jackson'],
+    synopsis: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.',
+    rating: 8.9,
+    streamingPlatforms: ['Netflix', 'Amazon Prime'],
+    buyPrice: 13.99,
+    rentPrice: 3.49,
+    duration: '2h 34m',
+    type: 'movie',
+    isEditorsPick: true
+  },
+  {
+    id: '4',
+    title: 'Breaking Bad',
+    poster: 'https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    backdrop: 'https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    releaseYear: 2008,
+    genres: ['Crime', 'Drama', 'Thriller'],
+    director: 'Vince Gilligan',
+    cast: ['Bryan Cranston', 'Aaron Paul', 'Anna Gunn'],
+    synopsis: 'A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family\'s future.',
+    rating: 9.4,
+    streamingPlatforms: ['Netflix'],
+    buyPrice: 59.99,
+    rentPrice: 19.99,
+    duration: '5 Seasons',
+    type: 'series',
+    seasons: 5,
+    episodes: 62,
+    isFeatured: true
+  },
+  {
+    id: '5',
+    title: 'Game of Thrones',
+    poster: 'https://images.pexels.com/photos/6447217/pexels-photo-6447217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    backdrop: 'https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    releaseYear: 2011,
+    genres: ['Action', 'Adventure', 'Drama', 'Fantasy'],
+    director: 'David Benioff',
+    cast: ['Emilia Clarke', 'Kit Harington', 'Peter Dinklage'],
+    synopsis: 'Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.',
+    rating: 9.2,
+    streamingPlatforms: ['HBO Max'],
+    buyPrice: 79.99,
+    rentPrice: 29.99,
+    duration: '8 Seasons',
+    type: 'series',
+    seasons: 8,
+    episodes: 73,
+    isFeatured: true
+  },
+  {
+    id: '6',
+    title: 'The Dark Knight',
+    poster: 'https://images.pexels.com/photos/7234255/pexels-photo-7234255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    backdrop: 'https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    releaseYear: 2008,
+    genres: ['Action', 'Crime', 'Drama', 'Thriller'],
+    director: 'Christopher Nolan',
+    cast: ['Christian Bale', 'Heath Ledger', 'Aaron Eckhart'],
+    synopsis: 'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.',
+    rating: 9.0,
+    streamingPlatforms: ['Netflix', 'HBO Max'],
+    buyPrice: 14.99,
+    rentPrice: 3.99,
+    duration: '2h 32m',
+    type: 'movie'
+  },
+  {
+    id: '7',
+    title: 'Stranger Things',
+    poster: 'https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    backdrop: 'https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    releaseYear: 2016,
+    genres: ['Drama', 'Fantasy', 'Horror', 'Mystery', 'Sci-Fi', 'Thriller'],
+    director: 'The Duffer Brothers',
+    cast: ['Millie Bobby Brown', 'Finn Wolfhard', 'Winona Ryder'],
+    synopsis: 'When a young boy disappears, his mother, a police chief, and his friends must confront terrifying supernatural forces in order to get him back.',
+    rating: 8.7,
+    streamingPlatforms: ['Netflix'],
+    buyPrice: 59.99,
+    rentPrice: 19.99,
+    duration: '4 Seasons',
+    type: 'series',
+    seasons: 4,
+    episodes: 34,
+    isNewRelease: true
+  },
+  {
+    id: '8',
+    title: 'Oppenheimer',
+    poster: 'https://images.pexels.com/photos/1054713/pexels-photo-1054713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    backdrop: 'https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    releaseYear: 2023,
+    genres: ['Biography', 'Drama', 'History'],
+    director: 'Christopher Nolan',
+    cast: ['Cillian Murphy', 'Emily Blunt', 'Matt Damon'],
+    synopsis: 'The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.',
+    rating: 8.5,
+    streamingPlatforms: ['CinemateOriginal'],
+    buyPrice: 19.99,
+    rentPrice: 5.99,
+    duration: '3h 10m',
+    type: 'movie',
+    isNewRelease: true,
+    isEditorsPick: true
+  }
+];
+
+export const reviews: Review[] = [
+  {
+    id: '1',
+    userId: '1',
+    userName: 'John Doe',
+    userAvatar: 'https://i.pravatar.cc/150?img=1',
+    mediaId: '1',
+    rating: 9,
+    content: 'Mind-bending masterpiece that gets better with each viewing. Nolans score create an unforgettable experience.',
+    hasSpoilers: false,
+    tags: ['masterpiece', 'complex', 'mind-bending'],
+    likes: 24,
+    createdAt: '2023-01-15T14:30:00Z',
+    isApproved: true
+  },
+  {
+    id: '2',
+    userId: '2',
+    userName: 'Jane Smith',
+    userAvatar: 'https://i.pravatar.cc/150?img=5',
+    mediaId: '1',
+    rating: 8,
+    content: 'Visually stunning and conceptually fascinating, though occasionally gets lost in its own complexity. Still a remarkable achievement in filmmaking.',
+    hasSpoilers: true,
+    tags: ['visually-stunning', 'complex'],
+    likes: 15,
+    createdAt: '2023-02-20T09:15:00Z',
+    isApproved: true
+  },
+  {
+    id: '3',
+    userId: '1',
+    userName: 'John Doe',
+    userAvatar: 'https://i.pravatar.cc/150?img=1',
+    mediaId: '4',
+    rating: 10,
+    content: 'Breaking Bad is simply the perfect television series. Walter White\'s transformation is the most compelling character arc I\'ve ever witnessed.',
+    hasSpoilers: false,
+    tags: ['masterpiece', 'character-development'],
+    likes: 42,
+    createdAt: '2022-12-05T18:45:00Z',
+    isApproved: true
+  },
+  {
+    id: '4',
+    userId: '2',
+    userName: 'Jane Smith',
+    userAvatar: 'https://i.pravatar.cc/150?img=5',
+    mediaId: '7',
+    rating: 9,
+    content: 'Stranger Things perfectly captures 80s nostalgia while delivering genuinely engaging supernatural mysteries and lovable characters.',
+    hasSpoilers: false,
+    tags: ['nostalgic', 'binge-worthy'],
+    likes: 31,
+    createdAt: '2023-03-10T21:20:00Z',
+    isApproved: true
+  }
+];
+
+export const comments: Comment[] = [
+  {
+    id: '1',
+    userId: '2',
+    userName: 'Jane Smith',
+    userAvatar: 'https://i.pravatar.cc/150?img=5',
+    reviewId: '1',
+    content: 'I completely agree! The dream layers were brilliantly executed.',
+    createdAt: '2023-01-16T10:45:00Z',
+    likes: 5
+  },
+  {
+    id: '2',
+    userId: '1',
+    userName: 'John Doe',
+    userAvatar: 'https://i.pravatar.cc/150?img=1',
+    reviewId: '2',
+    content: 'Good points about the complexity. I had to watch it twice to fully appreciate it.',
+    createdAt: '2023-02-21T15:30:00Z',
+    likes: 3
+  },
+  {
+    id: '3',
+    userId: '2',
+    userName: 'Jane Smith',
+    userAvatar: 'https://i.pravatar.cc/150?img=5',
+    reviewId: '3',
+    content: 'Walt and Jesse\'s chemistry (pun intended) really makes the show special.',
+    createdAt: '2022-12-06T09:15:00Z',
+    likes: 8
+  }
+];
